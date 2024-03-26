@@ -42,12 +42,13 @@ class HomeDataBillBean {
   late int billID;
   late String subType;
   late double money;
-  late TimeOfDay time;
+  late String time;
 
   HomeDataBillBean.fromMap(Map map) {
     billID = map['id'];
     subType = map['subtype'];
     money = map['subtype_money'];
-    time = TimeOfDay.fromDateTime(DateTime.parse('2023-04-13 ${map['time']}'));
+    time = '2023-04-13 ${map['time']}';
+    // time = TimeOfDay.fromDateTime(DateTime.parse('2023-04-13 ${map['time']}'));
   }
 }
